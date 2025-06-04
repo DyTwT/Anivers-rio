@@ -1,0 +1,163 @@
+* {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f7f8c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden; /* evita a barra de rolagem */
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* Presente de aniversário */
+.Presente {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tampa {
+    width: 220px; /* um pouco maior que a caixa */
+    height: 40px; /* altura fininha para parecer a tampa */
+    background-color: #5ba35c; 
+    position: absolute;
+    top: -10px; /* posiciona acima da caixa */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px 8px 0 0;
+    z-index: 2;
+}
+
+.Caixa {
+    width: 200px;
+    padding: 100px;
+    background-color: #65ce67;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra da caixa */
+    position: relative;
+    z-index: 1;
+}
+
+.FitaPresente {
+    position: absolute;
+    top: 0;
+    height: 70%;
+    width: 20px;
+    background-color: #e63946;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* acima da caixa */
+    border-radius: 5px;
+}
+
+/* Laço */
+.Laço {
+    position: absolute;
+    top: -35px; /* Ajuste a posição do laço */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+    background-color:transparent;
+    z-index: 2; /* Garantir que o laço apareça por cima da caixa */
+}
+
+/* Orelhas do laço */
+.Laço::before, 
+.Laço::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f36b6b;
+    border-radius: 50% 50% 0 50%;
+    z-index: 2;
+}
+
+.Laço::before {
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.Laço::after {
+    right: 0;
+    transform: rotate(45deg);
+    border-radius: 50% 50% 50% 0;
+}
+
+/* Fita */
+.Fita{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #9b3b3b;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 50px; /* Garantir que o título não se sobreponha ao presente */
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 30px;
+}
+
+/* Confetes */
+.confetes {
+    position: fixed; /* importante para evitar scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Não interfere com os outros elementos da página */
+    z-index: 9999;
+    overflow: hidden; /* previne o conteúdo de sair da área */
+}
+
+.confete {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f8d032;
+    border-radius: 50%;
+    animation: cair 4s linear infinite; /* Animação para cair os confetes */
+}
+
+@keyframes cair {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
