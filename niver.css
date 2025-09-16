@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
-    background-color: #f7f8c7;
+    background-color: #f0d6ee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ body {
 .Tampa {
     width: 220px; /* um pouco maior que a caixa */
     height: 40px; /* altura fininha para parecer a tampa */
-    background-color: #5ba35c; 
+    background-color: #ce6da9; 
     position: absolute;
     top: -10px; /* posiciona acima da caixa */
     left: 50%;
@@ -47,7 +47,7 @@ body {
 .Caixa {
     width: 200px;
     padding: 100px;
-    background-color: #65ce67;
+    background-color: #ca89b1;
     border-radius: 10px; /* Borda arredondada */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra da caixa */
     position: relative;
