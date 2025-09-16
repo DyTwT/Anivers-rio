@@ -146,7 +146,7 @@ h2 {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #f8d032;
+    background-color: #9cf832;
     border-radius: 50%;
     animation: cair 4s linear infinite; /* Animação para cair os confetes */
 }
